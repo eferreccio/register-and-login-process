@@ -1,0 +1,29 @@
+[
+ {
+  "id": 1,
+  "full_name": "Keith",
+  "last_name": "Richards",
+  "email": "keith@keith.com",
+  "password": "$2a$10$tMl6rkqytEjb3ysPjOIMbeT59A0x4hSxq6FkszFPCOBTc1BCTUGtm",
+  "country": "Argentina",
+  "avatar": "keith.jpg"
+ },
+ {
+  "id": 2,
+  "full_name": "mick",
+  "last_name": "jagger",
+  "email": "mick@mick.com",
+  "password": "$2a$10$SCnR4GH5v8WfH0vFdm7sTOO7DqUwqKzstS1T7Fef0iep/tc6Vpidu",
+  "country": "Argentina",
+  "avatar": "LENGUA-STONE-2-1280x720.jpg"
+ },
+ {
+  "id": 3,
+  "full_name": "Charlie",
+  "last_name": " Watts",
+  "email": "charlie@charlie.com",
+  "password": "$2a$10$wHjHpK2m2VzHyiB8Tug6M.xPEMkduszRJNatOcNd5/hxrJC04J6Ke",
+  "country": "Argentina",
+  "avatar": "charlie.jpg"
+ }
+]

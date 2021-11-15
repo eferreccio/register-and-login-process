@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/style.css">
+
+<header>
+  <div>  
+    <ul type="none">
+      <div>
+      <a href="/">
+      <img src="/images/logo.png" class="logo">
+      </a>
+      </div>
+      <% if (locals.isLogged) { %>
+      <li>Hi <%= locals.userLogged.full_name %>!!!!!!</li>
+      <br>
+      <li>
+        <a href="/user/logout" style="text-decoration: none">Salir <i class="logout"></i></a>
+      </li>
+      <br>  
+      <% } else { %>  
+      <li>
+        <a href="/user/register" style="text-decoration: none">Creá tu cuenta <i class="login"></i></a>
+      </li>
+      <br>   
+      <li>
+        <a href="/user/login" style="text-decoration: none">Ingresá <i class="register"></i></a>
+      </li>
+      <br>
+      <% } %>  
+    </ul>
+  </nav>
+</header>
+

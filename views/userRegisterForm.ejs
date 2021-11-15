@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<html>
+    <%- include('./partials/header') %>
+    <body>  
+        <h2>Formulario de Registro</h2>
+        <form method="POST" action="/user/register" enctype="multipart/form-data">
+        <div>
+            <label><b>Nombre:</b></label>
+            <input type="text"  name="full_name" value="<%= locals.oldData ? oldData.full_name : null %>"> <!-- persistiendo datos -->                
+            <% if (locals.errors && errors.full_name) { %>
+            <div class="text-danger">
+                <%= errors.full_name.msg %>
+            </div>
+            <% } %>
+        </div>
+        <div>
+            <label><b>Apellido:</b></label>
+            <input type="text" name="last_name" value="<%= locals.oldData ? oldData.last_name : null %>">
+            <% if (locals.errors && errors.last_name) { %>
+                <div class="text-danger">
+                    <%= errors.last_name.msg %>
+                </div>
+                <% } %>
+        </div>
+        <div>
+            <label><b>Email:</b></label>
+            <input type="email" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+                <% } %>
+        </div>   
+        <div>
+            <label><b>Password:</b></label>
+            <input type="password" name="password">
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %>
+                </div>
+                <% } %>
+        </div> 
+        <div>
+            <label><b>Pais de Nacimiento:</b></label>
+            <select name="country">
+                <option value="">Elegí un país</option>
+                <% 
+                    let countries = ['Argentina', 'Uruguay','Chile','Colombia'];
+                %>
+                <% for (const oneCountry of countries) { %>
+                    <option 
+                    value="<%= oneCountry %>"
+                    <%= locals.oldData && (oneCountry === oldData.country) ? 'selected' : null %>>
+                        <%= oneCountry %></option>
+                <% } %>
+            </select>
+            <% if (locals.errors && errors.country) { %>
+                <div class="text-danger">
+                    <%= errors.country.msg %>
+                </div>
+                <% } %>    
+        </div>
+        <div>
+            <label><b>Imagen de Perfil:</b></label>
+            <input type="file" name="avatar">
+            <% if (locals.errors && errors.avatar) { %>
+                <div class="text-danger">
+                    <%= errors.avatar.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            <input type="submit" value="Registrarse">
+        </div>           
+        </form>
+    </body>
+</html>
+
