@@ -3,8 +3,10 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <html>
-    <%- include('./partials/header') %>
-    <body>  
+    
+    <body>
+        <%- include('./partials/header') %>
+          
         <h2>Formulario de Registro</h2>
         <form method="POST" action="/user/register" enctype="multipart/form-data">
         <div>
@@ -76,6 +78,8 @@
             <input type="submit" value="Registrarse">
         </div>           
         </form>
+        <br>
+        <%- include('./partials/footer') %>
     </body>
 </html>
 

@@ -1,5 +1,3 @@
-//es una representación del archivo que tenemos en el json
-
 // 1-Guardar al usuario en la DB
 // 2-Buscar un usuario que se quiere loguear por su email
 // 3-Buscar a un usuario por su id

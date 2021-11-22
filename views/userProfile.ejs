@@ -3,12 +3,17 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <html>
-    <%- include('./partials/header') %>
-    <body class="profile">  
+    
+    <body class="profile">
+        <%- include('./partials/header') %>
+
         <h2>Bienvenido al perfil de <%= user.full_name %></h2>
+        <br>
         <img src="/images/avatars/<%= user.avatar%>" class="img-profile">
         <br>
         <br>
         <div><%= user.email %></div>
+        
+        <%- include('./partials/footer') %>
     </body>
 </html>
